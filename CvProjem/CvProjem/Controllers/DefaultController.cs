@@ -40,5 +40,16 @@ namespace CvProjem.Controllers
 			var hobilerim = db.TblHobilerim.ToList();
 			return PartialView(hobilerim);
 		}
+
+		public PartialViewResult Sertifikalar()
+		{
+			var sertifikalar = db.TblSertifikalarım.ToList();
+			return PartialView(sertifikalar);
+		}
+
+		public PartialViewResult iletisim()
+		{
+			return PartialView();
+		}
 	}
 }
