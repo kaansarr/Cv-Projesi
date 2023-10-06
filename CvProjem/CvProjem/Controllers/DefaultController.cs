@@ -22,5 +22,23 @@ namespace CvProjem.Controllers
             var deneyimler =db.TblDeneyimlerim.ToList();
             return PartialView(deneyimler);
         }
-    }
+
+		public PartialViewResult Egitimlerim()
+		{
+			var egitimler = db.TblEgitim.ToList();
+			return PartialView(egitimler);
+		}
+
+		public PartialViewResult Yeteneklerim()
+		{
+			var yetenekler = db.TblYeteneklerim.ToList();
+			return PartialView(yetenekler);
+		}
+
+		public PartialViewResult Hobilerim()
+		{
+			var hobilerim = db.TblHobilerim.ToList();
+			return PartialView(hobilerim);
+		}
+	}
 }
