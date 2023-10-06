@@ -46,10 +46,21 @@ namespace CvProjem.Controllers
 			var sertifikalar = db.TblSertifikalarım.ToList();
 			return PartialView(sertifikalar);
 		}
-
+		[HttpGet]
 		public PartialViewResult iletisim()
 		{
 			return PartialView();
 		}
+
+
+		[HttpPost]
+		public PartialViewResult iletisim(Tbliletişim t)
+		{
+			t.Tarih=DateTime.Parse(DateTime.Now.ToShortDateString());
+			db.Tbliletişim.Add(t);
+			db.SaveChanges();
+			return PartialView();
+		}
+
 	}
 }
