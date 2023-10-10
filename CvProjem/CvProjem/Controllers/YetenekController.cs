@@ -29,5 +29,28 @@ namespace CvProjem.Controllers
             repo.TAdd(p);
 			return RedirectToAction("Index");
 		}
+
+        public ActionResult YetenekSil(int id)
+        {
+            var yetenek=repo.Find(x=>x.ID==id);
+            repo.TDelete(yetenek);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult YetenekDuzenle(int id)
+        {
+            var yetenek = repo.Find(x => x.ID == id);
+
+            return View(yetenek);
+        }
+        [HttpPost]
+		public ActionResult YetenekDuzenle(TblYeteneklerim t)
+		{
+			var y = repo.Find(x => x.ID == t.ID);
+            y.Yetenek=t.Yetenek;
+            y.Oran = t.Oran;
+            repo.TUpdate(y);
+			return RedirectToAction("Index");
+		}
 	}
 }
