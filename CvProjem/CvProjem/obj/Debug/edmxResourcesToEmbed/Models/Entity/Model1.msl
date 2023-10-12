@@ -89,6 +89,7 @@
     <EntitySetMapping Name="TblSosyalMedya">
       <EntityTypeMapping TypeName="DbCvModel.TblSosyalMedya">
         <MappingFragment StoreEntitySet="TblSosyalMedya">
+          <ScalarProperty Name="Durum" ColumnName="Durum" />
           <ScalarProperty Name="ikon" ColumnName="ikon" />
           <ScalarProperty Name="Link" ColumnName="Link" />
           <ScalarProperty Name="Ad" ColumnName="Ad" />
