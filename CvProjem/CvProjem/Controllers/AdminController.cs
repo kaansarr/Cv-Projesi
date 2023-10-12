@@ -8,7 +8,7 @@ using CvProjem.Repositories;
 
 namespace CvProjem.Controllers
 {
-    [AllowAnonymous]
+   
     public class AdminController : Controller
     {
         GenericRepository<TblAdmin> repo = new GenericRepository<TblAdmin>();
