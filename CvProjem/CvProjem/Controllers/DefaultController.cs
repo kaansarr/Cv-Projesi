@@ -7,6 +7,7 @@ using CvProjem.Models.Entity;
 
 namespace CvProjem.Controllers
 {
+	[AllowAnonymous]
     public class DefaultController : Controller
     {
         
