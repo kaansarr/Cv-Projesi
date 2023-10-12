@@ -17,7 +17,14 @@ namespace CvProjem.Controllers
             return View(degerler);
         }
 
-        public PartialViewResult Deneyim()
+		public PartialViewResult SosyalMedya()
+		{
+			var sosyalmedyo = db.TblSosyalMedya.ToList();
+			return PartialView(sosyalmedyo);
+		}
+
+
+		public PartialViewResult Deneyim()
         {
             var deneyimler =db.TblDeneyimlerim.ToList();
             return PartialView(deneyimler);
